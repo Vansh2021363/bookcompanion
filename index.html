@@ -2030,39 +2030,56 @@
     
   
 
-    <script type="text/javascript">
-      function loadApp() {
-        $(".flipbook").turn({
-          width: 922, // Width
-          height: 600, // Height
-          elevation: 50, // Elevation
-          gradients: true, // Enable gradients
-          autoCenter: true, // Auto center this flipbook
-        });
-      }
-      $(".table-contents ul li a").on("click", function () {
-        let textContent = $(this).find("span").text();
-        let pageNumber = parseInt(textContent);
-        pageNumber += 2;
-        $("#flipbook").turn("page", pageNumber);
+  <script type="text/javascript">
+    // Load the flip sound
+    const flipSound = new Audio('./assets/bookFlip.mp3');
+  
+    function playFlipSound() {
+      flipSound.currentTime = 0; // Reset audio to start
+      flipSound.play();
+    }
+  
+    function loadApp() {
+      $(".flipbook").turn({
+        width: 922, // Width
+        height: 600, // Height
+        elevation: 50, // Elevation
+        gradients: true, // Enable gradients
+        autoCenter: true, // Auto center this flipbook
       });
-
-      $(".table-contents ul li2 a2").on("click", function () {
-        let textContent = $(this).find("span").text();
-        let pageNumber = parseInt(textContent);
-        pageNumber += 2;
-        $("#flipbook").turn("page", pageNumber);
+  
+      // Play sound whenever page is turned
+      $(".flipbook").bind("turning", function(event, page, view) {
+        playFlipSound();
       });
-
-      // Load the HTML4 version if there's not CSS transform
-      yepnope({
-        test: Modernizr.csstransforms,
-        yep: ["lib/turn.js", "css/jquery.ui.css"],
-        nope: ["lib/turn.html4.min.js", "css/jquery.ui.html4.css"],
-        both: ["css/basic.css"],
-        complete: loadApp,
-      });
-    </script>
+    }
+  
+    $(".table-contents ul li a").on("click", function () {
+      let textContent = $(this).find("span").text();
+      let pageNumber = parseInt(textContent);
+      pageNumber += 2;
+      $("#flipbook").turn("page", pageNumber);
+      playFlipSound(); // Play sound on direct navigation
+    });
+  
+    $(".table-contents ul li2 a2").on("click", function () {
+      let textContent = $(this).find("span").text();
+      let pageNumber = parseInt(textContent);
+      pageNumber += 2;
+      $("#flipbook").turn("page", pageNumber);
+      playFlipSound(); // Play sound on direct navigation
+    });
+  
+    // Load the HTML4 version if there's not CSS transform
+    yepnope({
+      test: Modernizr.csstransforms,
+      yep: ["lib/turn.js", "css/jquery.ui.css"],
+      nope: ["lib/turn.html4.min.js", "css/jquery.ui.html4.css"],
+      both: ["css/basic.css"],
+      complete: loadApp,
+    });
+  </script>
+  
     <div class="footer">
       <div class="w-container">
         <div>
