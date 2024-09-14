@@ -1,0 +1,27 @@
+<head>
+    <style>
+    .container {
+        max-height: 555px;
+        overflow: hidden;
+    }
+</style>
+</head>
+<div class="container">
+<div id="custom-datawrapper" style="min-height: 579px;"></div></div>
+<script type="text/javascript">
+    const datawrapperEmbed = document.createElement('script');
+    datawrapperEmbed.src = "./utensils_Script.js";
+    datawrapperEmbed.charset = "utf-8";
+    datawrapperEmbed.defer = true;
+
+    const noscriptImage = document.createElement('img');
+    noscriptImage.src = "https://datawrapper.dwcdn.net/HRCy4/full.png";
+    noscriptImage.alt = "";
+
+    const noscriptElement = document.createElement('noscript');
+    noscriptElement.appendChild(noscriptImage);
+
+    const customDatawrapperDiv = document.getElementById('custom-datawrapper');
+    customDatawrapperDiv.appendChild(datawrapperEmbed);
+    customDatawrapperDiv.appendChild(noscriptElement);
+</script>

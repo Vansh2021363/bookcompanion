@@ -1,0 +1,1113 @@
+body{
+	overflow: hidden; 
+	background-color:#fcfcfc;
+	margin:0;
+	padding:0;
+}
+
+.flipbook-viewport{
+	overflow:hidden;
+	width:100%;
+	height:100%;
+}
+
+.flipbook-viewport .container{
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin:auto;
+}
+
+.flipbook-viewport .flipbook{
+	width:922px;
+	height:600px;
+	left:-461px;
+	top:-300px;
+}
+
+.flipbook-viewport .page{
+	width:461px;
+	height:600px;
+	background-color:white;
+	background-repeat:no-repeat;
+	background-size:100% 100%;
+}
+
+.flipbook .page{
+	-webkit-box-shadow:0 0 20px rgba(0,0,0,0.2);
+	-moz-box-shadow:0 0 20px rgba(0,0,0,0.2);
+	-ms-box-shadow:0 0 20px rgba(0,0,0,0.2);
+	-o-box-shadow:0 0 20px rgba(0,0,0,0.2);
+	box-shadow:0 0 20px rgba(0,0,0,0.2);
+}
+
+.flipbook-viewport .page img{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	margin:0;
+}
+
+.flipbook-viewport .shadow{
+	-webkit-transition: -webkit-box-shadow 0.5s;
+	-moz-transition: -moz-box-shadow 0.5s;
+	-o-transition: -webkit-box-shadow 0.5s;
+	-ms-transition: -ms-box-shadow 0.5s;
+
+	-webkit-box-shadow:0 0 20px #ccc;
+	-moz-box-shadow:0 0 20px #ccc;
+	-o-box-shadow:0 0 20px #ccc;
+	-ms-box-shadow:0 0 20px #ccc;
+	box-shadow:0 0 20px #ccc;
+}
+
+.flipbook .table-contents li{
+	font-family: "Stempel-Garamond-W01-Roman";
+	list-style:none;
+	line-height:15px;
+}
+
+.flipbook .table-contents li2{
+	font-family: "Stempel-Garamond-W01-Roman";
+	list-style:none;
+	line-height:15px;
+}
+.flipbook .table-contents a2{
+	float:left;
+	width:98.7%;
+	clear:both;
+	text-decoration:none;
+	color:#333;
+	margin: 2px -10px;
+	padding:4px 10px;
+	line-height: 6px;
+}
+
+.flipbook .table-contents a2:hover{
+	background:#bbf3ce;
+	float:left;
+	width:98.7%;
+	clear:both;
+	text-decoration:none;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	-o-border-radius:10px;
+	-ms-border-radius:10px;
+	border-radius:10px;
+	cursor: pointer;
+}
+
+.flipbook .table-contents span{
+	float:right;
+}
+
+.flipbook .table-contents a{
+	float:left;
+	width:100%;
+	clear:both;
+	text-decoration:none;
+	color:#333;
+	margin: 2px -15px;
+	padding:3px 10px;
+	line-height: 12px;
+}
+
+.flipbook .table-contents a:hover{
+	background:#CAD1EE;
+	float:left;
+	width:100%;
+	clear:both;
+	text-decoration:none;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	-o-border-radius:10px;
+	-ms-border-radius:10px;
+	border-radius:10px;
+	cursor: pointer;
+}
+
+.flipbook h1{
+	font-family: "Stempel-Garamond-W01-Roman";
+	font-size:30px;
+	font-weight: lighter;
+	color: #333;
+	-webkit-text-fill-color: #333;
+	-webkit-text-stroke-color: white;
+	-webkit-text-stroke-width: 0.005em;
+	
+	margin-top: 40px;
+	margin-bottom: 20px;
+	margin-left: 30px;
+}
+
+.flipbook .even{
+	background:-webkit-gradient(linear, left top, right top, color-stop(0.97, #fff), color-stop(1, #dadada));
+	background-image:-webkit-linear-gradient(left, #fff 97%, #dadada 100%);
+	background-image:-moz-linear-gradient(left, #fff 97%, #dadada 100%);
+	background-image:-ms-linear-gradient(left, #fff 97%, #dadada 100%);
+	background-image:-o-linear-gradient(left, #fff 97%, #dadada 100%);
+	background-image:linear-gradient(left, #fff 97%, #dadada 100%);
+}
+
+.flipbook .odd{
+	background:-webkit-gradient(linear, right top, left top, color-stop(0.97, #fff), color-stop(1, #cacaca));
+	background-image:-webkit-linear-gradient(right, #fff 97%, #cacaca 100%);
+	background-image:-moz-linear-gradient(right, #fff 97%, #cacaca 100%);
+	background-image:-ms-linear-gradient(right, #fff 97%, #cacaca 100%);
+	background-image:-o-linear-gradient(right, #fff 97%, #cacaca 100%);
+	background-image:linear-gradient(right, #fff 97%, #cacaca 100%);
+}
+#cover{
+	background-position: -20px 0;
+}
+#inside_cover{
+	background-position: -15px 0;
+}
+
+.flipbook .about{
+	font-family: "Stempel-Garamond-W01-Roman";
+}
+
+.flipbook .about p{
+	
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 15px 30px;
+	line-height: 22px;
+}
+.flipbook .about.capital,
+.flipbook .about .no-indent{
+	text-indent: 0;
+}
+
+.flipbook .capital:first-letter {
+    display:block;
+    float:left;
+    font-size: 300%;
+    line-height: 70%;
+	margin-right: 6px;
+	margin-top: 7px;
+	margin-left: 8px;
+}
+
+.flipbook .bubble_chart p{
+	
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 17px 33px;
+	line-height: 22px;
+}
+
+.bubble_chart hr{
+	margin-top: 2rem;
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.flipbook .donut_plot p{
+	
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 20px 50px;
+	line-height: 22px;
+}
+
+.donut_plot hr{
+	margin-top: 1rem;
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.flipbook .sun_burst p{
+	
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 30px 40px;
+	line-height: 22px;
+}
+
+.sun_burst hr{
+	margin-top: 1rem;
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.flipbook .bubble_plot p{
+	
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 27px 50px;
+	line-height: 22px;
+}
+
+.bubble_plot hr{
+	margin-top: 4rem;
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.flipbook .bar_graph p{
+	
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 27px 30px;
+	line-height: 22px;
+}
+
+.bar_graph hr{
+	margin-top: 4rem;
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.flipbook .circular_dendogram p{
+	
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 29px 30px;
+	line-height: 22px;
+}
+
+.flipbook .circular_packing p{
+
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 27px 36px;
+	line-height: 22px;
+
+}
+
+.flipbook .word_cloud p{
+
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 30px 65px;
+	line-height: 22px;
+
+}
+
+.word_cloud hr{
+	margin-top: 3.2rem;
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.flipbook .page-number{
+	font-family: "Stempel-Garamond-W01-Roman";
+	color:#999;
+	width:100%;
+	bottom:15px;
+	position:absolute;
+	display:block;
+	text-align: center;
+	line-height:30px;
+	font-size:15px;
+}
+
+
+
+.circular_packing hr{
+	margin-top: 2rem;
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.circular_dendogram hr{
+
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+#HeadingPage {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+}
+#HeadingPage h2 {
+	text-align: center;
+	font-size: 2rem;
+}
+.Aromatic hr{
+	margin-top: 4rem;
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.flipbook .Aromatic p{
+	
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 30px 35px;
+	line-height: 22px;
+
+}
+
+.barchart hr{
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.flipbook .barchart p{
+	
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 30px 44px;
+	line-height: 22px;
+
+}
+
+.flipbook .deviation p{
+	
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 30px 48px;
+	line-height: 22px;
+
+}
+
+.deviation hr{
+	margin-top: 2rem;
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.flipbook .histogram p{
+	
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 30px 48px;
+	line-height: 22px;
+
+}
+
+.histogram hr{
+	margin-top: 2rem;
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.flipbook .horizontalbar p{
+	
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 30px 48px;
+	line-height: 22px;
+
+}
+
+.horizontalbar hr{
+	margin-top: 2rem;
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.flipbook .outputgil p{
+	
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 30px 38px;
+	line-height: 22px;
+
+}
+
+.outputgil hr{
+	margin-top: 2rem;
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.flipbook .outputgil3 p{
+	
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 23px 38px;
+	line-height: 22px;
+
+}
+
+.outputgil3 hr{
+	margin-top: 3.2rem;
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.flipbook .pie p{
+	
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 30px 38px;
+	line-height: 22px;
+
+}
+
+.pie hr{
+	margin-top: 3rem;
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.flipbook .radar p{
+	
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 30px 38px;
+	line-height: 22px;
+
+}
+
+.radar hr{
+	margin-top: 3rem;
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.flipbook .scatter p{
+	
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 30px 48px;
+	line-height: 22px;
+
+}
+
+.scatter hr{
+	margin-top: 3rem;
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.flipbook .treeMap p{
+	
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 30px 48px;
+	line-height: 22px;
+
+}
+
+.treeMap hr{
+	margin-top: 3rem;
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.flipbook .wordcloud2 p{
+
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 30px 65px;
+	line-height: 22px;
+
+}
+
+.wordcloud2 hr{
+	margin-top: 1.3rem;
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.flipbook .heat p{
+
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 10px 65px;
+	line-height: 22px;
+
+}
+
+.heat hr{
+	margin-top: 1.2rem;
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.flipbook .color p{
+
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 10px 65px;
+	line-height: 22px;
+
+}
+
+.color hr{
+	margin-top: 1.2rem;
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.flipbook .recipe p{
+
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 10px 65px;
+	line-height: 22px;
+
+}
+
+.recipe hr{
+	margin-top: 1.2rem;
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.flipbook .evolutionary p{
+
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 10px 65px;
+	line-height: 22px;
+
+}
+
+.evolutionary hr{
+	margin-top: 1.2rem;
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.flipbook .fusion p{
+
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 10px 65px;
+	line-height: 22px;
+
+}
+
+.fusion hr{
+	margin-top: 1.2rem;
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.flipbook .rasgulla p{
+
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 10px 65px;
+	line-height: 22px;
+
+}
+
+.rasgulla hr{
+	margin-top: 1.2rem;
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.flipbook .chicken p{
+
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 10px 65px;
+	line-height: 22px;
+
+}
+
+.chicken hr{
+	margin-top: 1.2rem;
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.caloriesDistribution {
+	text-align: center;
+}
+
+.caloriesDistribution h1 {
+	text-align: left;
+}
+
+.flipbook .caloriesDistribution p{
+
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 10px 65px;
+	line-height: 22px;
+
+}
+
+.caloriesDistribution hr{
+	margin-top: 1.2rem;
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.caloriesPerServing {
+	text-align: center;
+}
+
+.caloriesPerServing h1 {
+	text-align: left;
+}
+
+.flipbook .caloriesPerServing p{
+
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 10px 65px;
+	line-height: 22px;
+
+}
+
+.caloriesPerServing hr{
+	margin-top: 1.2rem;
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.totalCookingTime {
+	text-align: center;
+}
+
+.totalCookingTime h1 {
+	text-align: left;
+}
+
+.flipbook .totalCookingTime p{
+
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 10px 65px;
+	line-height: 22px;
+
+}
+
+.totalCookingTime hr{
+	margin-top: 1.2rem;
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.cookingTimePreparationTime {
+	text-align: center;
+}
+
+.cookingTimePreparationTime h1 {
+	text-align: left;
+}
+
+.flipbook .cookingTimePreparationTime p{
+
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 10px 65px;
+	line-height: 22px;
+
+}
+
+.cookingTimePreparationTime hr{
+	margin-top: 1.2rem;
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.topProcesses {
+	text-align: center;
+}
+
+.topProcesses h1 {
+	text-align: left;
+}
+
+.flipbook .topProcesses p{
+
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 10px 65px;
+	line-height: 22px;
+
+}
+
+.topProcesses hr{
+	margin-top: 1.2rem;
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.flipbook .CarbonFootrpintByDistributionCountryPiechart p{
+
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 10px 65px;
+	line-height: 22px;
+
+}
+
+.CarbonFootrpintByDistributionCountryPiechart hr{
+	margin-top: 1.2rem;
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.flipbook .CarbonFootprintByRegion p{
+
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 10px 65px;
+	line-height: 22px;
+
+}
+
+.CarbonFootprintByRegion hr{
+	margin-top: 1.2rem;
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.flipbook .CarbonFootprintBySystemBoundary p{
+
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 10px 65px;
+	line-height: 22px;
+
+}
+
+.CarbonFootprintBySystemBoundary hr{
+	margin-top: 1.2rem;
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.flipbook .CarbonFootprintOfTop500FoodCommodityItems p{
+
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 10px 65px;
+	line-height: 22px;
+
+}
+
+.CarbonFootprintOfTop500FoodCommodityItems hr{
+	margin-top: 1.2rem;
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.flipbook .DistributionOfCarbonFootprintHistogram p{
+
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 10px 65px;
+	line-height: 22px;
+
+}
+
+.DistributionOfCarbonFootprintHistogram hr{
+	margin-top: 1.2rem;
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.flipbook .NumberofCarbonFootprintDataPointsByPublicationYearandRegion p{
+
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 10px 65px;
+	line-height: 22px;
+
+}
+
+.NumberofCarbonFootprintDataPointsByPublicationYearandRegion hr{
+	margin-top: 1.2rem;
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.flipbook .NumberOfCarbonFootprintsReportedPerPublicationYear p{
+
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 10px 65px;
+	line-height: 22px;
+
+}
+
+.NumberOfCarbonFootprintsReportedPerPublicationYear hr{
+	margin-top: 1.2rem;
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.flipbook .Top15FoodCommodityTypologiesByAverageCarbonFootprint p{
+
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 10px 65px;
+	line-height: 22px;
+
+}
+
+.Top15FoodCommodityTypologiesByAverageCarbonFootprint hr{
+	margin-top: 1.2rem;
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.flipbook .TotalNumberofItemsReportedbyTypeofSource p{
+
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 10px 65px;
+	line-height: 22px;
+
+}
+
+.TotalNumberofItemsReportedbyTypeofSource hr{
+	margin-top: 1.2rem;
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.flipbook .wordcloud3 p{
+
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 30px 65px;
+	line-height: 22px;
+
+}
+
+.wordcloud3 hr{
+	margin-top: 1.3rem;
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+.flipbook .wordcloud4 p{
+
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 30px 65px;
+	line-height: 22px;
+
+}
+
+.wordcloud4 hr{
+	margin-top: 1.3rem;
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+.flipbook .wordcloud5 p{
+
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 30px 65px;
+	line-height: 22px;
+
+}
+
+.wordcloud5 hr{
+	margin-top: 1.3rem;
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.flipbook .topCategories p{
+
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 10px 65px;
+	line-height: 22px;
+
+}
+
+.topCategories hr{
+	margin-top: 1.2rem;
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.top20Categories {
+	text-align: center;
+}
+
+.top20Categories h1 {
+	text-align: left;
+}
+
+.flipbook .top20Categories p{
+
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 10px 65px;
+	line-height: 22px;
+
+}
+
+.top20Categories hr{
+	margin-top: 1.2rem;
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.top20Entities {
+	text-align: center;
+}
+
+.top20Entities h1 {
+	text-align: left;
+}
+
+.flipbook .top20Entities p{
+
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 10px 65px;
+	line-height: 22px;
+
+}
+
+.top20Entities hr{
+	margin-top: 1.2rem;
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.flavorprofile {
+	text-align: center;
+}
+
+.flavorprofile h1 {
+	text-align: left;
+}
+
+.flipbook .flavorprofile p{
+
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 10px 65px;
+	line-height: 22px;
+
+}
+
+.flavorprofile hr{
+	margin-top: 1.2rem;
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.top20NaturalSources {
+	text-align: center;
+}
+
+.top20NaturalSources h1 {
+	text-align: left;
+}
+
+.flipbook .top20NaturalSources p{
+
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 10px 65px;
+	line-height: 22px;
+
+}
+
+.top20NaturalSources hr{
+	margin-top: 1.2rem;
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.EnergyDistribution {
+	text-align: center;
+}
+
+.EnergyDistribution h1 {
+	text-align: left;
+}
+
+.flipbook .EnergyDistribution p{
+
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 10px 65px;
+	line-height: 22px;
+
+}
+
+.EnergyDistribution hr{
+	margin-top: 1.2rem;
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.IOFIdistribution {
+	text-align: center;
+}
+
+.IOFIdistribution h1 {
+	text-align: left;
+}
+
+.flipbook .IOFIdistribution p{
+
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 10px 65px;
+	line-height: 22px;
+
+}
+
+.IOFIdistribution hr{
+	margin-top: 1.2rem;
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.NaturalOccurance {
+	text-align: center;
+}
+
+.NaturalOccurance h1 {
+	text-align: left;
+}
+
+.flipbook .NaturalOccurance p{
+
+	font-family: "Stempel-Garamond-W01-Roman";
+	margin: 10px 65px;
+	line-height: 22px;
+
+}
+
+.NaturalOccurance hr{
+	margin-top: 1.2rem;
+	margin-left:auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+
+.dropdown {
+    width: 130px;  /* Set the width of the dropdown */
+    padding: 10px;  /* Add padding inside the dropdown */
+    padding-right: 30px;  /* Add right padding to shift the text */
+    font-size: 16px;  /* Set the font size */
+    color: #333;  /* Set the text color */
+    background-color: #f8f8f8;  /* Set the background color */
+    border: 1px solid #ccc;  /* Set the border */
+    border-radius: 5px;  /* Round the corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Add a subtle shadow */
+    transition: all 0.3s ease;  /* Add a transition effect */
+    cursor: pointer;  /* Change cursor to pointer on hover */
+}
+
+/* Add hover effects */
+.dropdown:hover {
+    background-color: #e0e0e0;  /* Change background on hover */
+}
+
+/* Style the dropdown options */
+.dropdown option {
+    background-color: #f8f8f8;  /* Background color for options */
+    color: #333;  /* Text color */
+    padding: 10px;  /* Add padding */
+    font-size: 16px;  /* Set font size */
+}
